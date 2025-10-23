@@ -1,7 +1,7 @@
 
-import { test, expect } from '../fixtures/roles';
+import { test } from '../fixtures/roles';
 import PIMPage from '../pages/PIMPage';
-import { Page } from '@playwright/test';
+import AdminPage from '../pages/AdminPage';
 import fs from 'fs';
 import { Employee } from '../models/Employee';
 import { SystemUser } from '../models/SystemUser';
@@ -22,6 +22,7 @@ test('[TC01_01] Admin creates employee', async({ admin_context })=>{
 
     const page=admin_context;
     const pim_page=new PIMPage(page);
+    const admin_page=new AdminPage(page);
 
     const employee=generateEmployee(); // employee object
     const supervisor=generateEmployee(); // supervisor object
@@ -34,6 +35,14 @@ test('[TC01_01] Admin creates employee', async({ admin_context })=>{
         employee.username,
         employee.password
     );
+
+    await admin_page.createSystemUser(
+        `${employee.first_name} ${employee.middle_name} ${employee.last_name}`,
+        'ESS',
+        'Enabled',
+        employee.username,
+        employee.password
+    )
    
     await pim_page.createEmployee(
         supervisor.first_name,
@@ -43,18 +52,22 @@ test('[TC01_01] Admin creates employee', async({ admin_context })=>{
         supervisor.username,
         supervisor.password
     );
+
+     await admin_page.createSystemUser(
+        `${supervisor.first_name} ${supervisor.middle_name} ${supervisor.last_name}`,
+        'ESS',
+        'Enabled',
+        supervisor.username,
+        supervisor.password
+    )
     
     // save credentials
     fs.writeFileSync(
         'credentials-temp.json',
         JSON.stringify(
             { 
-                employee_username: employee.username, 
-                employee_password: employee.password, 
-                employee_id: employee.id,
-                supervisor_username: supervisor.username, 
-                supervisor_password: supervisor.password, 
-                supervisor_id: supervisor.id,
+                employee,
+                supervisor
             }
         , null, 2)
     );

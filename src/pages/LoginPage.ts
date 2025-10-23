@@ -23,7 +23,7 @@ export default class LoginPage{
      * Go to login page
      */
     async goto(){
-        await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', {waitUntil: 'networkidle'})
     }
 
     /**
@@ -54,5 +54,7 @@ export default class LoginPage{
         await this.enterUsername(username);
         await this.enterPassword(password);
         await this.clickLogin();
+        // await this.page.waitForLoadState('networkidle', {timeout: 60000});
+        // await this.page.getByRole('link', { name: 'Admin' }).waitFor({ state: 'visible', timeout: 60000 });
     }
 }
