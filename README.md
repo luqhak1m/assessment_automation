@@ -9,7 +9,6 @@ Name: Luqman Hakim bin Noorazmi
 - Initialize a Git repository and link it to the GitHub repository
 
 ## Environment & Assumptions
-(List environment variables for Admin, Employee, Supervisor credentials, and any assumptions you made.)
 
 - The automation uses environment variables and files to manage credentials
 = Admin credentials are fixed and stored in a .env file (and gitignored) with the username and password
