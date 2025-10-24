@@ -48,6 +48,7 @@ HTML report: npx playwright show-report
 - Some navigation such as login was able to be dealt with using 'waitUntil: "domcontentloaded"'
 - Some elements are equipped with the '.waitFor({state: "visible"})' and the '.toBeVisible()' function, though it still ends up failing sometimes: 'Error: expect(locator).toBeVisible() failed' when trying to assert the result
 - Most of the test cases fails due to this issue that halts the progress of the assessment
+- Each failure's traces are attached within the 'Result HTML/<tect_case_id>' directory
 - All other components of the assessment are done following the requirements from the assessment question
 
 ## Formatting
