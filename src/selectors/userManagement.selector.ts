@@ -1,5 +1,4 @@
-
-export const UserManagementSelector={
+export const UserManagementSelector = {
   report_to_tab: 'role=link[name="Report-to"]',
 
   add_supervisor_button: 'role=button[name=" Add"]',

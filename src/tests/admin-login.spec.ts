@@ -4,11 +4,14 @@ import LoginPage from '../pages/LoginPage';
 
 dotenv.config();
 
-test("Admin Login test_01", async({ page })=>{
-    const loginPage=new LoginPage(page);
-    await loginPage.login(process.env.USERNAME_ADMIN!, process.env.PASSWORD_ADMIN!);
-    await page.getByRole('link', { name: 'Admin' }).click();
-})
+test('Admin Login test_01', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  await loginPage.login(
+    process.env.USERNAME_ADMIN!,
+    process.env.PASSWORD_ADMIN!,
+  );
+  await page.getByRole('link', { name: 'Admin' }).click();
+});
 
 // test("Admin Login", async({ page })=>{
 //     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -44,4 +47,3 @@ test("Admin Login test_01", async({ page })=>{
 //   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers');
 //   await page.getByRole('heading', { name: 'Admin' }).click();
 // });
-

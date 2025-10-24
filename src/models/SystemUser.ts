@@ -1,5 +1,5 @@
-export interface SystemUser{
-    username: string;
-    password: string;
-    status: boolean;
+export interface SystemUser {
+  username: string;
+  password: string;
+  status: boolean;
 }

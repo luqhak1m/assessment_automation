@@ -2,13 +2,16 @@ import { test } from '../fixtures/roles';
 import { getCredentials } from '../utils/envVarManager';
 import LeavePage from '../pages/LeavePage';
 
-test('[TC03_01] Supervisor Approve Leave', async({ supervisor_context })=>{
-    const page=supervisor_context;
-    const leavePage=new LeavePage(page);
+test('[TC03_01] Supervisor Approve Leave', async ({ supervisor_context }) => {
+  const page = supervisor_context;
+  const leavePage = new LeavePage(page);
 
-    const employee_full_name=`${getCredentials().employee.first_name} ${getCredentials().employee.middle_name}  ${getCredentials().employee.last_name}`;
+  const employee_full_name = `${getCredentials().employee.first_name} ${getCredentials().employee.middle_name}  ${getCredentials().employee.last_name}`;
 
-    await leavePage.approveEmployeeLeave(employee_full_name, ' 2025-27-10 to 2025-31-10');
+  await leavePage.approveEmployeeLeave(
+    employee_full_name,
+    ' 2025-27-10 to 2025-31-10',
+  );
 });
 
 //   await page.getByRole('link', { name: 'Leave' }).click();
@@ -27,7 +30,3 @@ test('[TC03_01] Supervisor Approve Leave', async({ supervisor_context })=>{
 //   await page.getByRole('row', { name: ' 2025-27-10 to 2025-31-10' }).click();
 //   await page.getByRole('button', { name: 'Approve' }).click();
 //   await page.getByText('Successfully Updated').click();
-
-
-  
-   
