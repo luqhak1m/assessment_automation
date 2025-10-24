@@ -26,7 +26,7 @@ export default class LoginPage {
     await this.page.goto(
       'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
       {
-        waitUntil: 'networkidle',
+        waitUntil: 'domcontentloaded',
       },
     );
   }
@@ -36,6 +36,7 @@ export default class LoginPage {
    * @param {string} username Username
    */
   async enterUsername(username: string) {
+    await this.username_field.waitFor({ state: 'visible' });
     await this.username_field.fill(username);
   }
 

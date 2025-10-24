@@ -39,9 +39,11 @@ export default class AdminPage {
   }
 
   async clickUserManagementTab() {
+      
     const tab = this.page
-      .locator('role=listitem')
-      .filter({ hasText: 'User Management' });
+    .locator('role=listitem')
+    .filter({ hasText: 'User Management' });
+    await tab.waitFor({ state: 'visible' });
     await tab.click();
   }
 

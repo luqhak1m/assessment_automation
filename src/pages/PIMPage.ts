@@ -50,6 +50,7 @@ export default class PIMPage {
   }
 
   async clickAddEmployee() {
+    await this.add_employee_link.waitFor({ state: 'visible' });
     await this.add_employee_link.click();
     // await this.page.getByRole('heading', { name: 'Add Employee' }).waitFor({ state: 'visible', timeout: 120000 });
   }

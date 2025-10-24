@@ -39,7 +39,9 @@ export default class LeavePage {
   }
 
   async navigateToLeaveApply() {
+    await this.leave_menu.waitFor({ state: 'visible' });
     await this.leave_menu.click();
+    await this.apply_link.waitFor({ state: 'visible' });
     await this.apply_link.click();
   }
 
