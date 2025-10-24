@@ -1,0 +1,52 @@
+{"version":8,"type":"context-options","origin":"testRunner","browserName":"","options":{},"platform":"darwin","wallTime":1761278680097,"monotonicTime":9089.834,"sdkLanguage":"javascript"}
+{"type":"before","callId":"hook@1","stepId":"hook@1","startTime":9091.222,"class":"Test","method":"hook","title":"Before Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@30","stepId":"fixture@30","parentId":"hook@1","startTime":9096.744,"class":"Test","method":"fixture","title":"Fixture \"browser\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@31","stepId":"pw:api@31","parentId":"fixture@30","startTime":9098.202,"class":"Test","method":"pw:api","title":"Launch browser","params":{"handleSIGINT":"false","tracesDir":"/Users/luq/Documents/projects/modefair/test-results/.playwright-artifacts-1/traces","headless":"false","ignoreDefaultArgs":"undefined","ignoreAllDefaultArgs":"false","env":"undefined","timeout":"180000"},"stack":[]}
+{"type":"after","callId":"pw:api@31","endTime":9316.979,"annotations":[]}
+{"type":"after","callId":"fixture@30","endTime":9317.065,"annotations":[]}
+{"type":"before","callId":"fixture@34","stepId":"fixture@34","parentId":"hook@1","startTime":9318.226,"class":"Test","method":"fixture","title":"Fixture \"context\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@35","stepId":"pw:api@35","parentId":"fixture@34","startTime":9319.89,"class":"Test","method":"pw:api","title":"Create context","params":{"acceptDownloads":"accept","bypassCSP":"false","colorScheme":"light","hasTouch":"false","ignoreHTTPSErrors":"true","isMobile":"false","javaScriptEnabled":"true","locale":"en-US","offline":"false","viewport":"Object","serviceWorkers":"allow","selectorEngines":"[]","testIdAttributeName":"data-testid","noDefaultViewport":"false","extraHTTPHeaders":"undefined","storageState":"undefined","reducedMotion":"undefined","forcedColors":"undefined","contrast":"undefined","clientCertificates":"undefined"},"stack":[]}
+{"type":"after","callId":"pw:api@35","endTime":9328.737,"annotations":[]}
+{"type":"after","callId":"fixture@34","endTime":9330.627,"annotations":[]}
+{"type":"before","callId":"fixture@36","stepId":"fixture@36","parentId":"hook@1","startTime":9330.845,"class":"Test","method":"fixture","title":"Fixture \"page\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@37","stepId":"pw:api@37","parentId":"fixture@36","startTime":9331.593,"class":"Test","method":"pw:api","title":"Create page","params":{},"stack":[]}
+{"type":"after","callId":"pw:api@37","endTime":9563.813,"annotations":[]}
+{"type":"after","callId":"fixture@36","endTime":9563.854,"annotations":[]}
+{"type":"before","callId":"fixture@38","stepId":"fixture@38","parentId":"hook@1","startTime":9564.03,"class":"Test","method":"fixture","title":"Fixture \"admin_context\"","params":{},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/fixtures/roles.ts","line":8,"column":26}]}
+{"type":"before","callId":"pw:api@39","stepId":"pw:api@39","parentId":"fixture@38","startTime":9565.4,"class":"Test","method":"pw:api","title":"Navigate to \"/web/index.php/auth/login\"","params":{"url":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login","waitUntil":"domcontentloaded","timeout":"0"},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LoginPage.ts","line":26,"column":21,"function":"LoginPage.goto"}]}
+{"type":"after","callId":"pw:api@39","endTime":13097.209,"annotations":[]}
+{"type":"before","callId":"pw:api@40","stepId":"pw:api@40","parentId":"fixture@38","startTime":13099.064,"class":"Test","method":"pw:api","title":"Wait for selector locator('input[name=\"username\"]')","params":{"selector":"input[name=\"username\"]","strict":"true","omitReturnValue":"true","state":"visible","timeout":"0"},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LoginPage.ts","line":39,"column":31,"function":"LoginPage.enterUsername"}]}
+{"type":"after","callId":"pw:api@40","endTime":13911.804,"annotations":[]}
+{"type":"before","callId":"pw:api@41","stepId":"pw:api@41","parentId":"fixture@38","startTime":13913.715,"class":"Test","method":"pw:api","title":"Fill \"Admin\" locator('input[name=\"username\"]')","params":{"selector":"input[name=\"username\"]","value":"Admin","strict":"true","timeout":"0"},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LoginPage.ts","line":40,"column":31,"function":"LoginPage.enterUsername"}]}
+{"type":"after","callId":"pw:api@41","endTime":13928.332,"annotations":[]}
+{"type":"before","callId":"pw:api@42","stepId":"pw:api@42","parentId":"fixture@38","startTime":13929.267,"class":"Test","method":"pw:api","title":"Fill \"admin123\" locator('input[name=\"password\"]')","params":{"selector":"input[name=\"password\"]","value":"admin123","strict":"true","timeout":"0"},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LoginPage.ts","line":48,"column":31,"function":"LoginPage.enterPassword"}]}
+{"type":"after","callId":"pw:api@42","endTime":13937.269,"annotations":[]}
+{"type":"before","callId":"pw:api@43","stepId":"pw:api@43","parentId":"fixture@38","startTime":13937.89,"class":"Test","method":"pw:api","title":"Click locator('button[type=\"submit\"]')","params":{"selector":"button[type=\"submit\"]","strict":"true","timeout":"0"},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LoginPage.ts","line":55,"column":29,"function":"LoginPage.clickLogin"}]}
+{"type":"after","callId":"pw:api@43","endTime":13959.541,"annotations":[]}
+{"type":"after","callId":"fixture@38","endTime":13959.567,"annotations":[]}
+{"type":"after","callId":"hook@1","endTime":13959.602,"annotations":[]}
+{"type":"before","callId":"pw:api@44","stepId":"pw:api@44","startTime":13961.789,"class":"Test","method":"pw:api","title":"Click locator('role=link[name=\"Leave\"]')","params":{"selector":"role=link[name=\"Leave\"]","strict":"true","timeout":"0"},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LeavePage.ts","line":91,"column":27,"function":"LeavePage.navigateToLeaveList"}]}
+{"type":"after","callId":"pw:api@44","endTime":16861.934,"annotations":[]}
+{"type":"error","message":"TypeError: Cannot read properties of undefined (reading 'click')","stack":[{"file":"/Users/luq/Documents/projects/modefair/src/pages/LeavePage.ts","line":92,"column":32,"function":"LeavePage.navigateToLeaveList"},{"file":"/Users/luq/Documents/projects/modefair/src/pages/LeavePage.ts","line":143,"column":5,"function":"LeavePage.searchEmployeeAndSelectLeave"},{"file":"/Users/luq/Documents/projects/modefair/src/tests/admin.verify-leave.spec.ts","line":11,"column":3}]}
+{"type":"before","callId":"hook@45","stepId":"hook@45","startTime":16862.579,"class":"Test","method":"hook","title":"After Hooks","params":{},"stack":[]}
+{"type":"before","callId":"fixture@46","stepId":"fixture@46","parentId":"hook@45","startTime":16886.125,"class":"Test","method":"fixture","title":"Fixture \"admin_context\"","params":{},"stack":[{"file":"/Users/luq/Documents/projects/modefair/src/fixtures/roles.ts","line":8,"column":26}]}
+{"type":"after","callId":"fixture@46","endTime":16886.186,"annotations":[]}
+{"type":"before","callId":"fixture@47","stepId":"fixture@47","parentId":"hook@45","startTime":16886.261,"class":"Test","method":"fixture","title":"Fixture \"page\"","params":{},"stack":[]}
+{"type":"after","callId":"fixture@47","endTime":16886.278,"annotations":[]}
+{"type":"before","callId":"fixture@48","stepId":"fixture@48","parentId":"hook@45","startTime":16886.343,"class":"Test","method":"fixture","title":"Fixture \"context\"","params":{},"stack":[]}
+{"type":"before","callId":"pw:api@49","stepId":"pw:api@49","parentId":"fixture@48","startTime":16950.075,"class":"Test","method":"pw:api","title":"Close context","params":{"reason":"Test ended."},"stack":[]}
+{"type":"after","callId":"pw:api@49","endTime":16970.95,"annotations":[]}
+{"type":"after","callId":"fixture@48","endTime":16970.978,"annotations":[]}
+{"type":"before","callId":"fixture@61","stepId":"fixture@61","parentId":"hook@45","startTime":16972.642,"class":"Test","method":"fixture","title":"Fixture \"viewport\"","params":{},"stack":[{"file":"project#","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@61","endTime":16972.656,"annotations":[]}
+{"type":"before","callId":"fixture@69","stepId":"fixture@69","parentId":"hook@45","startTime":16973.219,"class":"Test","method":"fixture","title":"Fixture \"ignoreHTTPSErrors\"","params":{},"stack":[{"file":"project#","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@69","endTime":16973.227,"annotations":[]}
+{"type":"after","callId":"hook@45","endTime":16974.184,"attachments":[{"name":"screenshot","contentType":"image/png","sha1":"7abb1013f828098c97da35a15a36e38fe926b80f"}],"annotations":[]}
+{"type":"before","callId":"hook@80","stepId":"hook@80","startTime":16974.279,"class":"Test","method":"hook","title":"Worker Cleanup","params":{},"stack":[]}
+{"type":"before","callId":"fixture@84","stepId":"fixture@84","parentId":"hook@80","startTime":16974.746,"class":"Test","method":"fixture","title":"Fixture \"browser\"","params":{},"stack":[]}
+{"type":"after","callId":"fixture@84","endTime":17105.918,"annotations":[]}
+{"type":"before","callId":"fixture@89","stepId":"fixture@89","parentId":"hook@80","startTime":17106.352,"class":"Test","method":"fixture","title":"Fixture \"screenshot\"","params":{},"stack":[{"file":"project#","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@89","endTime":17106.361,"annotations":[]}
+{"type":"before","callId":"fixture@93","stepId":"fixture@93","parentId":"hook@80","startTime":17106.593,"class":"Test","method":"fixture","title":"Fixture \"headless\"","params":{},"stack":[{"file":"project#","line":1,"column":1}],"group":"configuration"}
+{"type":"after","callId":"fixture@93","endTime":17106.599,"annotations":[]}
+{"type":"after","callId":"hook@80","endTime":17106.666,"annotations":[]}
